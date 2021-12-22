@@ -126,6 +126,15 @@ header {
 
 .header-wrapper nav ul li a {
     color: #fff;
+    transition: all .5s ease-in-out;
+    padding-bottom: .3rem;
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+}
+
+.header-wrapper nav ul li a:hover {
+    transition: all .5s ease-in-out;
+    border-bottom: 1px solid #fff;
 }
 
 
@@ -190,6 +199,16 @@ header {
     color: #fff;
 }
 
+.section-hero .section-hero__imgTitle .section-hero__imgTitle__wrapper-images img {
+    transition: all 0.5s ease-out;
+}
+
+.section-hero .section-hero__imgTitle .section-hero__imgTitle__wrapper-images img:hover {
+    transition: all 0.5s ease-out;
+    filter: grayscale(1);
+    transform: rotate(3deg);
+}
+
 .section-hero .section-hero__imgTitle .section-hero__imgTitle__wrapper-images .section-hero__imgTitle__wrapper-images__image-one {
     position: absolute;
     top: 0;
@@ -240,6 +259,26 @@ header {
     letter-spacing: 1rem;
     font-feature-settings: revert;
     text-shadow: 8px 8px 27px rgb(51 51 51 / 46%);
+    animation-name: color;
+    animation-duration: 30s;
+}
+
+@keyframes color {
+    0% {
+        color: #1c1c1a;
+    }
+    25% {
+        color: rgb(54, 78, 56);
+    }
+    50% {
+        color: rgb(0, 187, 47);
+    }
+    75% {
+        color: rgb(184, 255, 188);
+    }
+    100% {
+        color: rgb(0, 90, 15);
+    }
 }
 
 .section-testimonial .section-testimonial-pages__wrapper-item {
@@ -293,6 +332,13 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all .5s ease-in-out;
+}
+
+.section-galery .section-galery-pages__wrapper-gallery img:hover {
+    transition: all .5s ease-in-out;
+    filter: grayscale(1);
+    transform: scale(1.02);
 }
 
 
@@ -508,6 +554,15 @@ footer .footer__col ul li {
 
 footer .footer__col ul li a {
     color: #fff;
+    transition: all .5s ease-in-out;
+    padding-bottom: .3rem;
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+}
+
+footer .footer__col ul li a:hover {
+    transition: all .5s ease-in-out;
+    border-bottom: 1px solid #fff;
 }
 
 
@@ -651,7 +706,7 @@ footer .footer__col ul li a {
         margin-bottom: 2rem;
     }
     .section-contact .section-contact__form {
-        width: 100% 
+        width: 100%
     }
     footer .footer-wrapper {
         flex-direction: column;
