@@ -78,6 +78,18 @@ ul {
     grid-area: footerpages;
 }
 
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+$textstyles: ( blanco: #fff, fuente: "Comforter Brush");
 header {
     position: absolute;
     width: 100%;
@@ -87,13 +99,12 @@ header {
 }
 
 .header-wrapper {
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
     align-items: center;
     h1 a {
         text-decoration: none;
         font-size: 1.3rem;
-        color: #fff;
+        color: map-get($textstyles, color);
         text-transform: uppercase;
         letter-spacing: 0.5px;
         font-weight: 200;
@@ -106,7 +117,7 @@ header {
         li {
             margin-left: 2rem;
             a {
-                color: #fff;
+                color: map-get($textstyles, color);
                 transition: all 0.5s ease-in-out;
                 padding-bottom: 0.3rem;
                 display: inline-block;
@@ -142,18 +153,17 @@ header {
             line-height: 1;
             span {
                 display: block;
-                font-family: "Comforter Brush", cursive;
+                font-family: map-get($textstyles, fuente);
                 font-size: 4rem;
             }
         }
         p {
-            color: #fff;
+            color: map-get($textstyles, color);
             line-height: 1.8;
         }
     }
     .section-hero__imgTitle {
-        display: flex;
-        justify-content: space-between;
+        @include flex-between;
         align-items: center;
         .section-hero__imgTitle__wrapper-images {
             position: relative;
@@ -167,7 +177,7 @@ header {
             align-items: flex-end;
             box-sizing: border-box;
             padding-left: 3rem;
-            color: #fff;
+            color: map-get($textstyles, color);
         }
         .section-hero__imgTitle__wrapper-images {
             img {
@@ -202,7 +212,7 @@ header {
                 display: inline-block;
                 border-bottom: 1px solid #ffffff;
                 padding: 1rem 0;
-                font-family: "Comforter Brush", cursive;
+                font-family: map-get($textstyles, fuente);
                 font-size: 2rem;
             }
             p {
@@ -307,11 +317,11 @@ header {
         font-family: "Outfit", sans-serif;
         line-height: 1;
         padding: 8rem 0;
-        color: #fff;
+        color: map-get($textstyles, color);
         font-size: 2rem;
         span {
             display: block;
-            font-family: "Comforter Brush", cursive;
+            font-family: map-get($textstyles, fuente);
             font-size: 4rem;
         }
     }
@@ -366,16 +376,14 @@ header {
 }
 
 .section-contact>.section-wrapper {
-    display: flex;
+    @include flex-between;
     align-items: center;
-    justify-content: space-between;
 }
 
 .section-aboutUs {
     >.section-wrapper {
-        display: flex;
+        @include flex-between;
         align-items: center;
-        justify-content: space-between;
     }
     .section-aboutUs-img,
     .section-aboutUs-text {
@@ -437,11 +445,9 @@ header {
     border: 0;
     background-color: #233642;
     padding: 1rem;
-    color: #fff;
+    color: map-get($textstyles, color);
     margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex;
     height: auto;
     font-weight: 600;
 }
@@ -456,7 +462,7 @@ footer {
     margin-top: 5rem;
     background-color: #1c1c1a;
     padding: 5rem;
-    color: #fff;
+    color: map-get($textstyles, color);
     .footer-wrapper {
         display: flex;
         justify-content: space-evenly;
@@ -477,7 +483,7 @@ footer {
             li {
                 margin: 0.5rem 0;
                 a {
-                    color: #fff;
+                    color: map-get($textstyles, color);
                     transition: all 0.5s ease-in-out;
                     padding-bottom: 0.3rem;
                     display: inline-block;
