@@ -1,0 +1,65 @@
+
+.section-contact {
+    margin-top: 4rem;
+    .section-contact__form {
+        width: 40%;
+    }
+    .section-contact-text {
+        width: 60%;
+    }
+}
+
+.section-contact>.section-wrapper {
+    @include flex-between;
+    align-items: center;
+}
+
+.section-contact .section-contact-text  {
+    padding-left: 2rem;
+    text-align: right;
+}
+
+.section-contact .section-contact-text p {
+    line-height: 1.6;
+}
+
+.section-contact__form__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    label {
+        font-weight: 500;
+        font-size: 1.1em;
+        margin-bottom: 0rem;
+    }
+    select {
+        border: 0; 
+        border-bottom: 1px solid;
+        height: 30px;
+    }
+    input {
+        border: 0;
+        border-bottom: 1px solid;
+        height: 30px;
+        &:tyoe .section-contact__form form>.section-contact__form__group:nth-child(6) label {
+            margin-bottom: 0.3rem;
+        }
+    }
+}
+
+.section-contact__form form>.section-contact__form__group:nth-child(7) input {
+    border: 0;
+    background-color: #233642;
+    padding: 1rem;
+    color: map-get($textstyles, blanco);
+    margin-top: 1rem;
+    @include flex;
+    height: auto;
+    font-weight: 600;
+}
+
+.section-contact__form__group textarea {
+    border: 0;
+    border: 1px solid;
+    padding: 1rem;
+}

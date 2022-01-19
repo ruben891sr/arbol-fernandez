@@ -1,0 +1,25 @@
+.section-aboutUs {
+    margin-top: 4rem;
+    >.section-wrapper {
+        @include flex-between;
+        align-items: center;
+    }
+    .section-aboutUs-img,
+    .section-aboutUs-text {
+        width: 50%;
+    }
+    .section-aboutUs-img img {
+        display: inline-block;
+        width: 100%;
+        padding-right: 2rem;
+    }
+}
+
+.section-aboutUs .section-aboutUs-text {
+    padding-left: 2rem;
+    text-align: right;
+}
+
+.section-aboutUs .section-aboutUs-text p {
+    line-height: 1.6;
+}

@@ -1,0 +1,89 @@
+// Grid Home
+.body-index {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: unset;
+    grid-template-areas: "headerindex headerindex headerindex" "heroindex heroindex heroindex" "testimonialindex testimonialindex testimonialindex" "galeryindex galeryindex galeryindex" "footerindex footerindex footerindex";
+    .header-index {
+        grid-area: headerindex;
+    }
+    
+    .section-hero {
+        grid-area: heroindex;
+    }
+    
+    .section-testimonial {
+        grid-area: testimonialindex;
+    }
+    
+    .section-galery {
+        grid-area: galeryindex;
+    }
+    
+    .footer-index {
+        grid-area: footerindex;
+    }
+}
+
+// Grid Páginas
+.body-pages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: unset;
+    grid-template-areas: "headerpages headerpages headerpages" "sectiononegrid sectiononegrid sectiononegrid" "sectiontwogrid sectiontwogrid sectiontwogrid" "testimonialpages testimonialpages testimonialpages" "galerypages galerypages galerypages" "footerpages footerpages footerpages";
+    .header-pages {
+        grid-area: headerpages;
+    }
+    
+    .section-one-grid {
+        grid-area: sectiononegrid;
+    }
+    
+    .section-two-grid {
+        grid-area: sectiontwogrid;
+    }
+    
+    .section-testimonial-pages {
+        grid-area: testimonialpages;
+    }
+    
+    .section-galery-pages {
+        grid-area: galerypages;
+    }
+    
+    .footer-pages {
+        grid-area: footerpages;
+    }
+}
+
+// Grid Gallery
+.section-galery .section-galery-pages__wrapper-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    grid-template-areas: "imagen-uno imagen-dos imagen-tres" "imagen-cuatro imagen-cuatro imagen-tres";
+    img {
+        &:nth-child(1) {
+            grid-area: imagen-uno;
+        }
+        &:nth-child(2) {
+            grid-area: imagen-dos;
+        }
+        &:nth-child(3) {
+            grid-area: imagen-tres;
+        }
+        &:nth-child(4) {
+            grid-area: imagen-cuatro;
+        }
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            transition: all 0.5s ease-in-out;
+            filter: grayscale(1);
+            transform: scale(1.02);
+        }
+    }
+}

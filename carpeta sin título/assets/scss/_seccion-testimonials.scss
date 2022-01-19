@@ -1,0 +1,51 @@
+.section-testimonial {
+    margin: 4rem 0;
+    h3 {
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1;
+        margin: 2rem;
+        font-size: 7rem;
+        color: #1c1c1a;
+        letter-spacing: 1rem;
+        font-feature-settings: revert;
+        text-shadow: 8px 8px 27px #33333375;
+        animation-name: color;
+        animation-duration: 30s;
+    }
+    .section-testimonialpages__wrapper-item {
+        border-left: 3px solid #1c1c1a;
+        border-right: 3px solid #1c1c1a;
+        padding-left: 3rem;
+        margin: 4rem 0;
+        padding: 3rem 5rem;
+        h4 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            margin-top: 0;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            line-height: 1.8;
+        }
+    }
+}
+
+@keyframes color {
+    0% {
+        color: #1c1c1a;
+    }
+    25% {
+        color: rgb(54, 78, 56);
+    }
+    50% {
+        color: rgb(0, 187, 47);
+    }
+    75% {
+        color: rgb(184, 255, 188);
+    }
+    100% {
+        color: rgb(0, 90, 15);
+    }
+}

@@ -1,0 +1,21 @@
+.section-nativeTrees {
+    position: relative;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+}
+
+.section-nativeTrees__leaves img {
+    position: absolute;
+    width: 35%;
+    left: -2%;
+    top: -17%;
+}
+
+.section-nativeTrees .section-nativeTrees__iframe {
+    display: flex;
+    justify-content: flex-end;
+    iframe {
+        width: 60% !important;
+        height: 400px !important;
+    }
+}
